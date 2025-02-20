@@ -2,7 +2,7 @@ import 'package:activity_resume/screens/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const ResumeApp());
+  runApp( ResumeApp());
 }
 
 class ResumeApp extends StatelessWidget {
@@ -17,7 +17,6 @@ class ResumeApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
         useMaterial3: true,
       ),
-
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple, brightness: Brightness.dark),
         useMaterial3: true,

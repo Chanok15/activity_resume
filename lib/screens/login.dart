@@ -1,3 +1,4 @@
+import 'package:activity_resume/screens/resume_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -6,6 +7,7 @@ class LoginPage extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
+
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -16,18 +18,9 @@ class _LoginPageState extends State<LoginPage> {
     final password = _passwordController.text;
 
     if (username == 'testing' && password == '123') {
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: const Text('Login Successful'),
-          content: const Text('Welcome!'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const ResumePage()),
       );
     } else {
       showDialog(
@@ -45,6 +38,7 @@ class _LoginPageState extends State<LoginPage> {
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
