@@ -167,6 +167,7 @@ class ResumeCard extends StatelessWidget {
               ],
             ),
           ],
+
         ),
       ),
     );
